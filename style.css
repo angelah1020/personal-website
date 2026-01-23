@@ -28,6 +28,10 @@ body,
     background: var(--bg-light);
     color: var(--text-primary);
     line-height: 1.6;
+}
+
+html,
+body {
     overflow-x: hidden;
 }
 
