@@ -27,35 +27,6 @@ body {
     overflow-x: hidden;
 }
 
-img,
-a {
-    -webkit-user-drag: none;
-}
-
-.custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 28px;
-    height: 28px;
-    background-image: url("images/noun-cursor-122767.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    pointer-events: none;
-    transform: translate(0, 0) scale(1);
-    transform-origin: top left;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    z-index: 2000;
-}
-
-.custom-cursor.is-hover {
-    transform: translate(0, 0) scale(1.35);
-}
-
-.custom-cursor.is-hidden {
-    opacity: 0;
-}
-
 .gradient-bg {
     display: none;
 }
@@ -124,12 +95,14 @@ nav ul {
 nav a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.2s ease;
     font-weight: 500;
+    display: inline-flex;
 }
 
 nav a:hover {
     color: var(--primary);
+    transform: translateY(-1px);
 }
 
 nav a.active {
@@ -214,10 +187,12 @@ section {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .hero-links a:hover {
     color: var(--primary);
+    transform: translateY(-1px);
 }
 
 .btn {
@@ -225,7 +200,7 @@ section {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
     display: inline-block;
     border: none;
 }
@@ -278,12 +253,13 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-link-btn:hover {
     border-color: var(--primary);
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .hero-visual {
@@ -709,7 +685,7 @@ section {
     color: var(--text-secondary);
     text-decoration: underline;
     font-size: 1.1rem;
-    transition: all 0.3s;
+    transition: color 0.2s ease, transform 0.2s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -731,10 +707,12 @@ footer a {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 footer a:hover {
     color: var(--primary);
+    transform: translateY(-1px);
 }
 
 @keyframes fadeIn {
@@ -786,53 +764,6 @@ footer a:hover {
     }
 }
 
-@media (pointer: coarse) {
-    body {
-        cursor: auto;
-    }
-
-    .custom-cursor {
-        display: none;
-    }
-}
-
-@media (pointer: fine) {
-    :root {
-        --hidden-cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>") 0 0;
-    }
-
-    html,
-    body,
-    *,
-    *::before,
-    *::after {
-        cursor: var(--hidden-cursor), none !important;
-    }
-
-    *:active,
-    *:focus,
-    *:focus-visible {
-        cursor: var(--hidden-cursor), none !important;
-    }
-
-    html.force-hide-cursor,
-    html.force-hide-cursor * {
-        cursor: var(--hidden-cursor), none !important;
-    }
-
-    a,
-    button,
-    .btn,
-    .project-link-btn,
-    .contact-link {
-        cursor: none !important;
-    }
-
-    nav,
-    nav * {
-        cursor: var(--hidden-cursor), none !important;
-    }
-}
 
 html {
     scroll-behavior: smooth;

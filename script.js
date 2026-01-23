@@ -66,37 +66,4 @@ window.addEventListener('scroll', () => {
 updateActiveLink();
 updateProgress();
 
-const customCursor = document.querySelector('.custom-cursor');
-if (customCursor) {
-    const handleMouseMove = event => {
-        customCursor.style.left = `${event.clientX}px`;
-        customCursor.style.top = `${event.clientY}px`;
-        customCursor.classList.remove('is-hidden');
-    };
-
-    const hoverTargets = document.querySelectorAll(
-        'a, button, .btn, .project-card, .experience-card, .skill-category, .project-link-btn, .contact-link, .skill-tag'
-    );
-
-    hoverTargets.forEach(target => {
-        target.addEventListener('mouseenter', () => customCursor.classList.add('is-hover'));
-        target.addEventListener('mouseleave', () => customCursor.classList.remove('is-hover'));
-    });
-
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseleave', () => customCursor.classList.add('is-hidden'));
-    window.addEventListener('mouseenter', () => customCursor.classList.remove('is-hidden'));
-
-    document.addEventListener('mousedown', () => {
-        document.documentElement.classList.add('force-hide-cursor');
-    });
-
-    document.addEventListener('mouseup', () => {
-        document.documentElement.classList.remove('force-hide-cursor');
-    });
-
-    document.addEventListener('dragstart', event => {
-        event.preventDefault();
-    });
-}
 
