@@ -27,6 +27,35 @@ body {
     overflow-x: hidden;
 }
 
+img,
+a {
+    -webkit-user-drag: none;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background-image: url("images/noun-cursor-122767.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    transform: translate(0, 0) scale(1);
+    transform-origin: top left;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    z-index: 2000;
+}
+
+.custom-cursor.is-hover {
+    transform: translate(0, 0) scale(1.35);
+}
+
+.custom-cursor.is-hidden {
+    opacity: 0;
+}
+
 .gradient-bg {
     display: none;
 }
@@ -199,7 +228,6 @@ section {
     transition: all 0.3s;
     display: inline-block;
     border: none;
-    cursor: pointer;
 }
 
 .btn-small {
@@ -755,6 +783,54 @@ footer a:hover {
         height: 200px;
         border-right: none;
         border-bottom: 1px solid var(--border-light);
+    }
+}
+
+@media (pointer: coarse) {
+    body {
+        cursor: auto;
+    }
+
+    .custom-cursor {
+        display: none;
+    }
+}
+
+@media (pointer: fine) {
+    :root {
+        --hidden-cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'></svg>") 0 0;
+    }
+
+    html,
+    body,
+    *,
+    *::before,
+    *::after {
+        cursor: var(--hidden-cursor), none !important;
+    }
+
+    *:active,
+    *:focus,
+    *:focus-visible {
+        cursor: var(--hidden-cursor), none !important;
+    }
+
+    html.force-hide-cursor,
+    html.force-hide-cursor * {
+        cursor: var(--hidden-cursor), none !important;
+    }
+
+    a,
+    button,
+    .btn,
+    .project-link-btn,
+    .contact-link {
+        cursor: none !important;
+    }
+
+    nav,
+    nav * {
+        cursor: var(--hidden-cursor), none !important;
     }
 }
 
