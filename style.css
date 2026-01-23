@@ -20,13 +20,16 @@
 }
 
 html,
-body {
+body,
+*,
+*::before,
+*::after {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--bg-light);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: auto;
+    cursor: auto !important;
 }
 
 a,
