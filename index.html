@@ -24,7 +24,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://drive.google.com/file/d/1kkzk52Sv4dwxF1tWPKFaYQAmUucw9j2B/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                <li><a href="https://drive.google.com/file/d/11RKEisRaVNlHfxA3AGZqBdVFOd9a9HYs/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></li>
                 <li><a href="https://github.com/angelah1020" target="_blank" rel="noopener noreferrer">GitHub</a></li>
             </ul>
         </div>
@@ -37,11 +37,11 @@
                     <h1>Angela Huang</h1>
                     <p class="subtitle">Software Engineer</p>
                     <p class="description">
-                      Hi! I'm Angela, a junior at Georgia Tech studying Computer Science with a minor in FinTech. I'm passionate about building
-                       full stack systems with experience across frontend and backend, and turning ideas into reliable software. I'm currently actively seeking Summer 2026 software engineering internship opportunities!
+                        Hi! I'm Angela, a senior at Georgia Tech studying Computer Science with minors in FinTech and Computation & Cognition. I'm passionate about software engineering and applied AI, with experience building backend systems, AI applications, and full stack products. I'm currently seeking 2027 new grad software engineering opportunities!
+
                     </p>
                     <div class="cta-buttons">
-                        <a href="https://drive.google.com/file/d/1kkzk52Sv4dwxF1tWPKFaYQAmUucw9j2B/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Resume</a>
+                        <a href="https://drive.google.com/file/d/11RKEisRaVNlHfxA3AGZqBdVFOd9a9HYs/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Resume</a>
                         <a href="#projects" class="btn btn-secondary">View Projects</a>
                     </div>
                 </div>
@@ -65,6 +65,28 @@
             <div class="experience-grid">
                 <div class="experience-card">
                     <div class="experience-image">
+                        <img src="images/experience-asus.svg" alt="ASUS">
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3 class="experience-title">Software Engineering Intern</h3>
+                                <p class="experience-company">ASUS Computer International</p>
+                            </div>
+                            <p class="experience-date">June 2026 – Aug 2026</p>
+                        </div>
+                        <ul>
+                            <li>Developed an enterprise Retrieval-Augmented Generation (RAG) assistant using Node.js, Qdrant vector database, and a locally hosted LLM, enabling semantic search across 4,800+ indexed text and image records from enterprise branding guidelines</li>
+                            <li>Built an AI-powered image compliance verification system using OpenCV, FastAPI, and a vision-language model (VLM), reducing manual review effort by 80%+ through automated logo, color, and branding rule validation</li>
+                            <li>Engineered Node.js and Python backend services across 20+ REST API endpoints, integrating vector retrieval, computer vision, and VLM inference into a unified multimodal pipeline for document search and image compliance verification</li>
+                            <li>Improved retrieval quality by ~30% through intent routing, brand-aware metadata filtering, query expansion, and custom reranking, increasing the relevance and accuracy of AI-generated responses</li>
+                            <li>Enhanced document ingestion workflows for 500+ internal IT knowledge base documents, improving content accuracy and completeness while standardizing content into a unified Markdown repository for future semantic search and LLM-powered retrieval</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-image">
                         <img src="images/experience-quantrend.webp" alt="Quantrend Technology">
                     </div>
                     <div class="experience-content">
@@ -76,11 +98,10 @@
                             <p class="experience-date">June 2025 – Aug 2025</p>
                         </div>
                         <ul>
-                            <li>Built a Rust-based market data pipeline processing 1M+ Binance futures depth updates per day across 5 trading pairs</li>
-                            <li>Engineered high-performance order book reconstruction system, reducing daily processing time by 60% via parallel processing</li>
-                            <li>Designed data validation pipeline executing 1,400 API requests/min with tight data consistency thresholds</li>
-                            <li>Developed real-time depth syncer capturing 500-level order book data with sub-second latency</li>
-                            <li>Implemented MongoDB time-series architecture enabling 1,440 daily depth snapshots</li>
+                            <li>Built a Rust-based historical market data pipeline processing 1M+ order book updates daily across five cryptocurrency trading pairs, reconstructing validated order book snapshots and uploading them to MongoDB</li>
+                            <li>Engineered a high-performance order book reconstruction system from compressed market data, reducing daily processing time by 60% via parallel processing with Rayon and milestone recovery</li>
+                            <li>Designed a data validation pipeline with cross-source price validation, bid/ask spread analysis, and automated gap detection, executing 1,400 API requests per minute to ensure high data integrity for quantitative systems</li>
+                            <li>Developed a real-time market depth synchronization service that captured 500-level Binance order book snapshots every five minutes and stored them in MongoDB for downstream quantitative analysis</li>
                         </ul>
                     </div>
                 </div>
@@ -98,36 +119,59 @@
                             <p class="experience-date">June 2024 – Aug 2024</p>
                         </div>
                         <ul>
-                            <li>Developed full-stack web application with Flask backend integrating chatbot and predictive analytics</li>
-                            <li>Integrated OpenAI GPT with ChromaDB vector database for RAG, improving information access speed by ~30%</li>
-                            <li>Engineered PyTorch-based time-series prediction pipeline, improving ML model accuracy by ~15%</li>
-                            <li>Implemented dynamic user interfaces with HTML/CSS/JavaScript, enhancing usability scores by ~40%</li>
-                            <li>Created 10+ unit and integration tests, reducing backend integration bugs by ~25%</li>
+                            <li>Developed a full-stack web application with a Flask backend, integrating an AI-powered chatbot and predictive analytics to support intelligent user interactions and data-driven insights</li>
+                            <li>Integrated OpenAI GPT with ChromaDB vector database for retrieval-augmented generation, enabling efficient query resolution across domain-specific documents and improving information access speed by ~30%</li>
+                            <li>Engineered a PyTorch-based time-series prediction pipeline with modular preprocessing, scaling, and evaluation components, improving ML model accuracy by ~15% over baseline and reducing error propagation in downstream features</li>
+                            <li>Implemented unit and integration testing with pytest and Flask test clients, reducing backend integration bugs by ~25%</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="experience-photos">
-                <h3>Recent Internship Highlight - Quantrend Technology</h3>
+                <h3>ASUS Internship - Summer 2026</h3>
+                <p>This summer, I interned at ASUS Computer International, where I worked on AI-powered search for an internal brand platform. I got to work across backend systems, LLMs, vector search, and image analysis throughout the summer. Here are a few highlights!</p>
+                <div class="experience-photo-grid">
+                    <figure class="experience-photo-card">
+                        <div class="experience-photo-frame">
+                            <img src="images/experience-asus-highlight-1.jpg" alt="Angela outside the ASUS office">
+                        </div>
+                        <figcaption>Summer at ASUS ☀️</figcaption>
+                    </figure>
+                    <figure class="experience-photo-card">
+                        <div class="experience-photo-frame">
+                            <img src="images/experience-asus-highlight-2.jpg" alt="Volunteering at Second Harvest of Silicon Valley">
+                        </div>
+                        <figcaption>Volunteering at Second Harvest of Silicon Valley</figcaption>
+                    </figure>
+                    <figure class="experience-photo-card">
+                        <div class="experience-photo-frame">
+                            <img src="images/experience-asus-highlight-3.jpg" alt="ASUS final presentation with the interns">
+                        </div>
+                        <figcaption>Final presentation day with the interns</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="experience-photos">
+                <h3>Quantrend Internship - Summer 2025</h3>
                 <p>This summer, I interned at Quantrend Technology, a top tier AI driven quantitative trading firm and one of the world’s leading crypto market makers. I worked on backend systems supporting high frequency crypto markets in a hands on, fast paced, and incredibly rewarding environment. Here are a few highlights from the summer!</p>
                 <div class="experience-photo-grid">
                     <figure class="experience-photo-card">
                         <div class="experience-photo-frame">
-                            <img src="images/experience-quantrend-highlight-1.jpg" alt="Quantrend internship highlight 1">
+                            <img src="images/experience-quantrend-highlight-1.jpg" alt="Angela with the Quantrend team">
                         </div>
-                        <figcaption>Quantrend Technology • Highlight 1</figcaption>
+                        <figcaption>With the Quantrend team!</figcaption>
                     </figure>
                     <figure class="experience-photo-card">
                         <div class="experience-photo-frame">
-                            <img src="images/experience-quantrend-highlight-2.jpg" alt="Quantrend internship highlight 2">
+                            <img src="images/experience-quantrend-highlight-2.jpg" alt="Angela with the Quantrend logo">
                         </div>
-                        <figcaption>Quantrend Technology • Highlight 2</figcaption>
+                        <figcaption>Summer at Quantrend</figcaption>
                     </figure>
                     <figure class="experience-photo-card">
                         <div class="experience-photo-frame">
-                            <img src="images/experience-quantrend-highlight-3.jpg" alt="Quantrend internship highlight 3">
+                            <img src="images/experience-quantrend-highlight-3.jpg" alt="Angela working at her desk at Quantrend">
                         </div>
-                        <figcaption>Quantrend Technology • Highlight 3</figcaption>
+                        <figcaption>A day at the office 💻</figcaption>
                     </figure>
                 </div>
             </div>
@@ -150,7 +194,7 @@
                     <div class="project-header">
                         <span class="project-award">🏆 2nd Place Winner</span>
                         <h3>MedX: AI-Powered Healthcare Assistant</h3>
-                        <p class="project-role">GT Hacklytics • Full Stack Developer</p>
+                        <p class="project-role">GT Hacklytics • Full Stack Developer • Feb 2025</p>
                         <div class="project-links">
                             <a class="project-link-btn" href="https://devpost.com/software/medx-d7tle6" target="_blank" rel="noopener noreferrer">Devpost</a>
                             <a class="project-link-btn" href="https://github.com/angelah1020/MedX.git" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -158,9 +202,9 @@
                     </div>
                     <div class="project-body">
                         <ul>
-                            <li>Developed React Native app with Firebase Auth for medication tracking and drug interaction analysis</li>
-                            <li>Built AI-powered engine using Google Gemini API, processing 500+ concurrent analyses with <1.5s response time</li>
-                            <li>Designed encrypted cloud architecture achieving <2s login response time</li>
+                            <li>Developed a React Native app using Expo with Firebase Auth for medication tracking and drug interaction analysis, enabling secure multi-device access and accurate barcode scanning across 10,000+ FDA-approved medications</li>
+                            <li>Built an AI-powered drug interaction engine using Google Gemini API, processing 500+ concurrent analyses with &lt;1.5s response time and generating downloadable reports for patient safety and compliance</li>
+                            <li>Designed encrypted cloud architecture for medical data, achieving authentication success and &lt;2s login response time</li>
                         </ul>
                     </div>
                 </div>
@@ -213,13 +257,13 @@
                         <img src="images/project-smart-stadium.png" alt="Smart Stadium Project">
                     </div>
                     <div class="project-header">
-                        <h3>Smart Stadium – Vertically Integrated Project</h3>
-                        <p class="project-role">Full Stack Developer • Aug 2024 – Dec 2025</p>
+                        <h3>Smart Stadium - FanPlay</h3>
+                        <p class="project-role">GT Vertically Integrated Project • Full Stack Developer • Aug 2024 – Dec 2025</p>
                     </div>
                     <div class="project-body">
                         <ul>
                             <li>Collaborated with 5 team members in biweekly Agile sprint meetings to manage a MySQL database for the FanPlay app, leveraging Spring Boot and AWS for scalable backend solutions</li>
-                            <li>Built and tested 10+ backend routes and 6+ database entities, reducing API integration errors by 25% and improving query efficiency ~30%, while enabling WebSocket messaging with &lt;200 ms latency in staging</li>
+                            <li>Built and tested 10+ backend routes and 6+ database entities, reducing API integration errors by 25% and improving query efficiency by ~30%, while enabling WebSocket messaging with &lt;200 ms latency in staging</li>
                             <li>Developed 8+ iOS frontend components in SwiftUI, including user registration, privacy toggles, friend finder, and profile display, integrating them with backend APIs to increase supported user workflows and feature depth</li>
                         </ul>
                     </div>
@@ -238,11 +282,11 @@
                 <div class="skill-category">
                     <h3>Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Rust</span>
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Java</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">Java</span>
                         <span class="skill-tag">C++</span>
                         <span class="skill-tag">Swift</span>
                         <span class="skill-tag">HTML/CSS</span>
@@ -252,33 +296,40 @@
                 <div class="skill-category">
                     <h3>Frameworks & Platforms</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">FastAPI</span>
                         <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Spring Boot</span>
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">SwiftUI</span>
                         <span class="skill-tag">AWS</span>
                         <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Firebase</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
-                    <h3>Databases & Systems</h3>
+                    <h3>Databases</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">PostgreSQL</span>
                         <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Qdrant</span>
+                        <span class="skill-tag">ChromaDB</span>
                         <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Data pipelines</span>
-                        <span class="skill-tag">Concurrency</span>
-                        <span class="skill-tag">Distributed systems</span>
                     </div>
                 </div>
 
                 <div class="skill-category">
                     <h3>Systems Concepts</h3>
                     <div class="skill-tags">
+                        <span class="skill-tag">Retrieval-augmented generation</span>
+                        <span class="skill-tag">Vector search</span>
                         <span class="skill-tag">API design</span>
-                        <span class="skill-tag">Event-driven systems</span>
+                        <span class="skill-tag">Data pipelines</span>
                         <span class="skill-tag">Low-latency systems</span>
                         <span class="skill-tag">Time-series data processing</span>
                     </div>
@@ -291,7 +342,7 @@
         <div class="container">
             <div class="contact-content">
                 <h2>Let's Connect</h2>
-                <p>I'm currently seeking Summer 2026 Software Engineering internship opportunities. 
+                <p>I'm a senior at Georgia Tech and currently seeking 2027 new grad software engineering roles.
                    Feel free to reach out if you'd like to chat!</p>
                 <a href="mailto:angela.huang020@gmail.com" class="btn btn-primary">Send Me an Email</a>
                 <div class="contact-links">
